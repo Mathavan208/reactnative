@@ -1,5 +1,5 @@
 import React from "react";
-import { ImageBackground ,StyleSheet, View,Text, Button, Image} from "react-native";
+import { ImageBackground ,StyleSheet, View,Text, Button, Image, Alert} from "react-native";
 
 function WelcomeScreen(props) {
     return (
@@ -10,10 +10,10 @@ function WelcomeScreen(props) {
                     <Text style={{color:"white"}}>WELCOME</Text>
                 </View>
                 <View style={styles.loginbutton}>
-                    <Button title="login" ></Button>
+                    <Button title="login" onPress={()=>Alert.alert("Login","Please click me",[{text:"Yes",onPress:()=>console.log("yes")},{text:"No",onPress:()=>console.log("No")}])}></Button>
                     </View>
                     <View style={styles.registerbutton}>
-                    <Button title="Register" ></Button>
+                    <Button title="Register" onPress={()=>Alert.alert("Want to register","click yes or no",[{text:"yes",onPress:()=>console.log("yes")},{text:"no",onPress:()=>console.log("no")}])} ></Button>
                 </View>
             </ImageBackground>
 
